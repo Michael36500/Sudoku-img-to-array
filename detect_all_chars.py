@@ -16,9 +16,9 @@ for line in range(9):
         cv2.imwrite("temp.png", crop)
         ac_w += step_w
 
-        print(read_img("temp.png"))
+        # print(read_img("temp.png"), end = " ")
 
         cv2.imshow("win", crop)
-        cv2.waitKey(0)
+        cv2.waitKey(100)
     ac_h += step_h
     print()
