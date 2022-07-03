@@ -16,4 +16,4 @@ def read_img(path):
         print("tesseract detected non ints")
     return text
 
-print(read_img("hidden_board.png"))
+# print(read_img("hidden_board.png"))
