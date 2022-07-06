@@ -1,7 +1,9 @@
 from detect_all_chars import gen_grid
+from save_board import save_board
 
 M = 9
 def puzzle(a):
+    save_board(a)
     for i in range(M):
         for j in range(M):
             print(a[i][j],end = " ")
@@ -23,7 +25,7 @@ def solve(grid, row, col, num):
             if grid[i + startRow][j + startCol] == num:
                 return False
     return True
- 
+
 def Suduko(grid, row, col):
  
     if (row == M - 1 and col == M):
