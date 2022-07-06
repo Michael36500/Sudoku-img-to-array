@@ -1,3 +1,5 @@
+from detect_all_chars import gen_grid
+
 M = 9
 def puzzle(a):
     for i in range(M):
@@ -42,17 +44,9 @@ def Suduko(grid, row, col):
     return False
  
 '''0 means the cells where no value is assigned'''
-grid = [[0, 5, 0, 0, 1, 0, 0, 0, 6],
-        [3, 0, 0, 5, 0, 8, 0, 9, 0],
-        [0, 0, 0, 0, 0, 7, 0, 4, 0],
-        [0, 0, 0, 0, 0, 0, 0, 2, 0],
-        [0, 9, 0, 0, 0, 3, 1, 0, 0],
-        [0, 0, 0, 0, 0, 1, 0, 0, 9],
-        [0, 8, 0, 3, 6, 0, 9, 0, 5],
-        [9, 2, 0, 0, 0, 0, 0, 0, 0],
-        [6, 0, 0, 0, 7, 0, 0, 0, 0]]
+grid = gen_grid()
  
 if (Suduko(grid, 0, 0)):
     puzzle(grid)
 else:
-    print("Solution does not exist:(")
+    print("Solution does not exist :(")
